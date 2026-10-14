@@ -7,6 +7,18 @@ const {dbReadOnly, dbInsertOnly} = require("./dbConnect");
 app.use(express.static(__dirname));
 
 
+app.get('/read-query', (req, res) => {
+    const customQuery = req.query.customQuery;
+    dbReadOnly.query(customQuery, (err, results) => {
+        if (err) {
+            console.error("Error executing query:", err.message);
+            res.status(500).send("Error executing query");
+        } else {
+            res.json(results);
+        }
+    });
+});
+
 app.post('/post-text', (req, res) => {
     const sql = `INSERT INTO patient (name, dateofbirth)
     VALUES
