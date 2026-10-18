@@ -1,24 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>COMP4537 Lab 5</title>
-   <script src="../server2/databaseHandler.js" type="module"></script>
-</head>
-<body>
-    
-    <h1>COMP4537 Lab 5</h1>
-    <form action="/post-text" method="POST">
-        <input type="submit" value="Insert Data" />
-    </form>
-    <p id="data-post-text"></p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <script type="module" src="./js/script.js" defer></script>
+  </head>
+  <body>
+    <h1 class="title"></h1>
+    <button type="button" id="insert"></button>
+    <p id="post-response"></p>
 
-    <form action="/read-query" method="GET">
-        <textarea placeholder="Write your custom SELECT sql query here..." name="customQuery"></textarea>
-        <input type="submit" value="Execute Query" />
-    </form>
-    <p id="data-query-response"></p>
-
-</body>
+    <textarea id="custom-query-text"></textarea>
+    <button type="button" id="custom-query-button"></button>
+    <h2 id="query-header"></h2>
+    <ol id="query-response"></ol>
+  </body>
 </html>

@@ -1,0 +1,25 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 10px 40px;
+  position: relative;
+}
+
+button {
+  border-radius: 100vh;
+  padding: 8px 12px;
+  border: 1px solid black;
+  font-size: inherit;
+  margin-top: 4px;
+}
+
+textarea {
+  display: block;
+  border: 1px solid black;
+  field-sizing: content;
+  resize: none;
+  width: 20rem;
+  min-height: 3lh;
+  padding: 4px 8px;
+  font-size: 1rem;
+}
