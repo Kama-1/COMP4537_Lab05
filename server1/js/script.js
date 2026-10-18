@@ -41,7 +41,9 @@ class UI {
 }
 
 function main() {
-  const ui = new UI(new ApiCaller());
+  const ui = new UI(
+    new ApiCaller("https://comp4537lab05server2.up.railway.app/"),
+  );
 }
 
 main();
